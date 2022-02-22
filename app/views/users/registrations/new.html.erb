@@ -1,29 +1,33 @@
-<h2>Sign up</h2>
+<section class="flex h-screen w-full flex-wrap md:flex-nowrap">
+  <section class="md:basis-1/2 self-center items-center flex flex-col w-full">
+    <h1 class="text-4xl font-open-sans mb-7">ECU IFE</h1>
+    <h2 class="text-black-100 font-jost text-2xl mb-7">Create An Account</h2>
 
-<%= form_for(resource, as: resource_name, url: user_registration_path,  data: { turbo: false }) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
+    <%= form_with(model: resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }, local: true, class: 'w-full md:w-7/12 md-p-0 px-3 md:w-9/12 text-center font-open-sans text-gray-400') do |f| %>
+      <%= render "users/shared/error_messages", resource: resource %>
+      <div class="field mb-7">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email Address', class: 'text-gray-400 rounded focus:border-gray-100 focus:ring-0 w-full border-solid border-1 border-gray-100 px-5 py-4' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <div class="field mb-7">
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password",  placeholder: 'Password', class: 'text-gray-400 rounded focus:border-gray-100 focus:ring-0 w-full border-solid border-1 border-gray-100 px-5 py-4' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+      <div class="field mb-7">
+        <%= f.password_field :password_confirmation, autocomplete: "new-password",  placeholder: 'Confirm Password', class: 'text-gray-400 rounded focus:border-gray-100 focus:ring-0 w-full border-solid border-1 border-gray-100 px-5 py-4' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      <div class="actions mb-7">
+        <%= f.submit "Register", class: 'px-12 py-4 bg-green-200 btn text-white w-full rounded ' %>
+      </div>
+    <% end %>
+    <%= render "users/shared/links" %>
+  </section>
+  <aside class="border-solid border-2 border-green md:basis-1/2 hidden md:block">
 
-<%= render "users/shared/links" %>
+  </aside>
+</section>
