@@ -56,6 +56,9 @@ gem 'bootsnap', require: false
 gem 'rubocop-rails', '~> 2.13', '>= 2.13.2'
 gem 'rubocop-rspec', '~> 2.8'
 
+gem 'rspec-rails'
+gem 'capybara'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: [:mri, :mingw, :x64_mingw]
