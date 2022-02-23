@@ -3,7 +3,7 @@
     <h1 class="text-4xl font-open-sans mb-7">ECU IFE</h1>
     <h2 class="text-black-100 font-jost text-2xl mb-7">Create An Account</h2>
 
-    <%= form_with(model: resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }, local: true, class: 'w-full md:w-7/12 md-p-0 px-3 md:w-9/12 text-center font-open-sans text-gray-400') do |f| %>
+    <%= form_with(model: resource, as: resource_name, id: 'register', url: registration_path(resource_name), data: { turbo: false }, local: true, class: 'w-full md:w-7/12 md-p-0 px-3 md:w-9/12 text-center font-open-sans text-gray-400') do |f| %>
       <%= render "users/shared/error_messages", resource: resource %>
       <div class="field mb-7">
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email Address', class: 'text-gray-400 rounded focus:border-gray-100 focus:ring-0 w-full border-solid border-1 border-gray-100 px-5 py-4' %>
