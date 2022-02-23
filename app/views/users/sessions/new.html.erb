@@ -3,7 +3,7 @@
     <h1 class="text-4xl font-open-sans mb-7">ECU IFE</h1>
     <h2 class="text-black-100 font-jost text-2xl mb-7">Sign In To Your Account</h2>
 
-    <%= form_with(url: user_session_path, data: { turbo: false }, class: 'w-full md:w-7/12 md-p-0 px-3 md:w-9/12 text-center font-open-sans text-gray-400') do |f| %>
+    <%= form_with(model: resource, as: resource_name, url: user_session_path, id: 'login', data: { turbo: false }, class: 'w-full md:w-7/12 md-p-0 px-3 md:w-9/12 text-center font-open-sans text-gray-400') do |f| %>
       <div class="field mb-7">
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email Address', class: 'text-gray-400 rounded focus:border-gray-100 focus:ring-0 w-full border-solid border-1 border-gray-100 px-5 py-4' %>
       </div>
@@ -31,5 +31,6 @@
 
   </aside>
 </section>
+
 
 

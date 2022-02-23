@@ -56,15 +56,19 @@ gem 'bootsnap', require: false
 gem 'rubocop-rails', '~> 2.13', '>= 2.13.2'
 gem 'rubocop-rspec', '~> 2.8'
 
-gem 'rspec-rails'
+
 gem 'capybara'
 gem 'devise', '~> 4.8.1'
+gem 'webdrivers', '~> 5.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv-rails'
   gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
