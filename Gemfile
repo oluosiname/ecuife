@@ -56,7 +56,6 @@ gem 'bootsnap', require: false
 gem 'rubocop-rails', '~> 2.13', '>= 2.13.2'
 gem 'rubocop-rspec', '~> 2.8'
 
-
 gem 'capybara'
 gem 'devise', '~> 4.8.1'
 gem 'webdrivers', '~> 5.0'
@@ -71,7 +70,7 @@ group :development, :test do
   gem 'faker'
 end
 
-gem "brakeman"
+gem 'brakeman'
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
