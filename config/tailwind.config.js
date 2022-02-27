@@ -17,6 +17,8 @@ module.exports = {
       'white': '#FFFFFF',
       'red-100': '#cd5c5c',
       'red-200': '#e60026',
+      'orange-100': '#FFE36E',
+      'orange-200': '#FA9579',
     },
     extend: {
       fontFamily: {

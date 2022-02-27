@@ -12,6 +12,32 @@
 
 */
 
+@layer utilities {
+  .flash {
+    -webkit-box-shadow: 0px 2px 17px 5px rgba(204,202,204,1);
+    -moz-box-shadow: 0px 2px 17px 5px rgba(204,202,204,1);
+    box-shadow: 0px 2px 17px 5px rgba(204,202,204,1);
+    
+    @apply border-l-4 flex items-center  absolute  top-5 right-5  py-3 px-5 rounded-lg md:w-1/4 bg-white mt-0 md:mt-1 w-11/12
+  }
+
+  .flash.success {
+    @apply border-green-200 
+  }
+
+  .flash.error {
+    @apply border-red-200
+  }
+
+  .flash.alert {
+    @apply border-orange-200
+  }
+
+  .flash.notice {
+    @apply border-green-200 
+  }
+}
+
 * {
   box-sizing: border-box;
 }
