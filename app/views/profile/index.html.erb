@@ -6,20 +6,21 @@
         <h3 class="text-black-200 text-xl">Basic Information</h3>
         <label class="text-gray-400 text-sm font-light">View and update your personal details here.</label>
       </div>
-      <div class="border-t border-gray-300">
-        <%= form_with do |f| %>
-          <div class="flex justify-between py-3">
-            <div class="flex flex-col md:w-5/12">
-              <%= f.label :firstname %>
-              <%= f.text_field :firstname %>
-            </div>
-             <div class="flex flex-col md:w-5/12">
-              <%= f.label :lastname %>
-              <%= f.text_field :lastname %>
-            </div>
+      <%= form_with model: @profile, url: update_profile_path, data: { turbo: false } do |f| %>
+        <div class="border-t border-gray-300 flex justify-between py-3 flex-wrap md:flex-no-wrap">
+          <div class="flex flex-col md:w-5/12 w-full">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
           </div>
-        <% end %>
-      </div>
+            <div class="flex flex-col md:w-5/12 w-full">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name %>
+          </div>
+        </div>
+        <div class="actions my-7 border-t border-gray-300 py-3">
+          <%= f.submit "Save", class: 'px-10 py-3 bg-green-200 btn text-white rounded-md ' %>
+        </div>
+      <% end %>
     </div>
   </section>
 </main>

@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
   }
   get '/profile', to: 'profile#index'
+  post '/profile', to: 'profile#update', as: :update_profile
+  patch '/profile', to: 'profile#update'
 end
