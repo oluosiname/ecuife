@@ -38,7 +38,7 @@ jobs:
         run: bin/rails db:schema:load
       # Add or replace test runners here
       - name: Compile assets
-        run: bin/rails assets:precompile
+        run: bin/rails tailwindcss:build
       # Add or replace test runners here
       - name: Run tests
         run: bin/rake
