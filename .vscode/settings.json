@@ -1,0 +1,11 @@
+{
+  "ruby.rubocop.onSave": true,
+  "editor.formatOnSave": true,
+  "files.associations": {
+      "*.erb": "erb"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
+}
