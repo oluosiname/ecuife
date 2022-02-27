@@ -15,6 +15,8 @@ module.exports = {
       'gray-400': '#616161',
       'green-200': '#6fca3d',
       'white': '#FFFFFF',
+      'red-100': '#cd5c5c',
+      'red-200': '#e60026',
     },
     extend: {
       fontFamily: {
